@@ -35,7 +35,7 @@ class App extends React.Component {
   deletePost = post => {
     axios 
     .delete(`http://localhost:5000/api/posts/${post.id}`)
-    .then(reponse => {
+    .then(response => {
       const newPosts = this.state.posts.filter(p => p.id !== post.id);
       this.setState({
         posts: [...newPosts]
